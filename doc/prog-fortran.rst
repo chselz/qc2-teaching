@@ -124,6 +124,31 @@ missing a *main* which it was about to *start*. The main program
 in Fortran is indicated by the ``program`` statement, which is not present
 in the empty file we gave to ``gfortran``.
 
+In Fortran, the main program **can** be explicitly indicated using the ``PROGRAM`` statement, which is not present in the empty file we gave to ``gfortran``,
+but it is **not strictly required**. The compiler recognizes the first executable statement as 
+the start of the program, which is why minimal code like the following compiles without errors:
+
+.. code-block:: fortran
+
+    print*, "hi"
+    end
+
+However, using a ``PROGRAM`` statement is a good practice, especially in larger projects, because:
+
+- It makes the program structure clearer.
+- It prevents naming conflicts when working with modules.
+- Some compilers and tools may expect an explicitly named program for better diagnostics.
+
+For example, a well-structured Fortran program looks like this:
+
+.. code-block:: fortran
+
+    program my_program
+        print*, "hi"
+    end program my_program
+
+This version explicitly marks the start and end of the program, making it more readable and maintainable.
+
 .. admonition:: Important note about errors
    :class: tip
 
