@@ -294,7 +294,7 @@ Short ORCA Reference
 --------------------
 
 You can find a rough summary of the most important ORCA keywords in the following table.
-For a complete reference, consult the manual at https://orcaforum.kofo.mpg.de/.
+For a complete reference, consult the manual at https://www.faccts.de/docs/orca/6.0/manual/.
 
 +----------+------------------------------------------------------------+
 | Keyword  | Explanation                                                |
